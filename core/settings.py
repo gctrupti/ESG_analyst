@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6odcm&y8(nlcwwff)y!li88e)7t8rjj3@s_#ba9r_ofg(_086v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
 
@@ -139,13 +139,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+# Static files
+
+STATIC_URL = '/static/'
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+
+# CORS
+
 CORS_ALLOW_ALL_ORIGINS = True
+
+
+# DRF
 
 REST_FRAMEWORK = {
 
     'DEFAULT_PERMISSION_CLASSES': [
+
         'rest_framework.permissions.AllowAny',
+
     ]
+
 }
