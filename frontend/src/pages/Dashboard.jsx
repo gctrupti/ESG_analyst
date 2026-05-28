@@ -10,7 +10,8 @@ const [loading,setLoading]=useState(true);
 
 useEffect(()=>{
 
-fetch("http://127.0.0.1:8000/api/records/")
+
+fetch("https://esg-analyst.onrender.com/api/records/")
 .then(res=>res.json())
 .then(data=>{
 

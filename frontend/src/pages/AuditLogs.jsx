@@ -1,4 +1,4 @@
-import {useEffect,useState} from "react";
+import { useEffect,useState } from "react";
 import Layout from "../components/Layout";
 
 export default function AuditLogs(){
@@ -9,15 +9,17 @@ useEffect(()=>{
 
 fetch(
 
-"http://127.0.0.1:8000/api/audit/"
+"https://esg-analyst.onrender.com/api/audit/"
 
 )
 
 .then(res=>res.json())
 
-.then(data=>setLogs(data));
+.then(data=>setLogs(data))
 
-},[])
+.catch(err=>console.log(err));
+
+},[]);
 
 return(
 

@@ -1,4 +1,4 @@
-import {useEffect,useState} from "react";
+import { useEffect,useState } from "react";
 import Layout from "../components/Layout";
 
 export default function Reviews(){
@@ -9,13 +9,13 @@ useEffect(()=>{
 
 loadRecords();
 
-},[])
+},[]);
 
 async function loadRecords(){
 
 const res = await fetch(
 
-"http://127.0.0.1:8000/api/records/"
+"https://esg-analyst.onrender.com/api/records/"
 
 );
 
@@ -29,7 +29,7 @@ async function review(id,decision){
 
 await fetch(
 
-`http://127.0.0.1:8000/api/review/${id}/`,
+`https://esg-analyst.onrender.com/api/reviews/${id}/`,
 
 {
 
@@ -44,14 +44,13 @@ headers:{
 body:JSON.stringify({
 
 decision,
-
 comment:"Reviewed from React"
 
 })
 
 }
 
-)
+);
 
 loadRecords();
 
@@ -139,13 +138,11 @@ ${record.status==="APPROVED"
 <td className="flex gap-3 py-4">
 
 <button
-onClick={()=>
-review(
-record.id,
-"APPROVED"
-)
-}
+
+onClick={()=>review(record.id,"APPROVED")}
+
 className="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700"
+
 >
 
 Approve
@@ -153,13 +150,11 @@ Approve
 </button>
 
 <button
-onClick={()=>
-review(
-record.id,
-"FLAGGED"
-)
-}
+
+onClick={()=>review(record.id,"FLAGGED")}
+
 className="bg-yellow-500 text-white px-4 py-2 rounded-xl"
+
 >
 
 Flag
@@ -167,13 +162,11 @@ Flag
 </button>
 
 <button
-onClick={()=>
-review(
-record.id,
-"REJECTED"
-)
-}
+
+onClick={()=>review(record.id,"REJECTED")}
+
 className="bg-red-600 text-white px-4 py-2 rounded-xl"
+
 >
 
 Reject
