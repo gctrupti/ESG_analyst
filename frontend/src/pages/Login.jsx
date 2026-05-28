@@ -127,7 +127,7 @@ Login
 
 <p className="text-center text-slate-400 text-sm mt-6">
 
-Demo Login → admin / admin@098
+{/* Demo Login → admin / admin@098 */}
 
 </p>
 
