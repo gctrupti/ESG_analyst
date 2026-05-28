@@ -1,0 +1,7 @@
+Employee,TripType,Origin,Destination,DistanceKM,Category,Cost
+
+Rahul Sharma,Flight,BLR,DEL,1740,Economy,12000
+
+Priya Rao,Hotel,Mumbai,Mumbai,0,Business Hotel,8500
+
+Amit Verma,Taxi,BLR,Airport,35,Ground Transport,900

@@ -1,0 +1,7 @@
+MeterID,Facility,BillingPeriod,Usage_kWh,Tariff,Cost
+
+ELEC001,Bangalore Plant,2026-05,12500,Commercial,87500
+
+ELEC002,Mumbai Office,2026-05,8300,Industrial,54000
+
+ELEC003,Chennai Warehouse,2026-05,15600,Commercial,112000
